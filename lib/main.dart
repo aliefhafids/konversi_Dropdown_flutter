@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:konversi_flutter_pt1/widgets/HasilAkhir.dart';
 import 'package:konversi_flutter_pt1/widgets/InputSuhu.dart';
-import 'package:konversi_flutter_pt1/widgets/KonversiSuhu.dart';
 import 'package:konversi_flutter_pt1/widgets/RiwayatPerhitungan.dart';
 import 'package:konversi_flutter_pt1/widgets/TargetPerhitungan.dart';
 
@@ -42,10 +41,6 @@ class _MyAppState extends State < MyApp > {
     });
   }
 
-  void konversiSuhu() {
-    return setState(() {});
-  }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -77,16 +72,12 @@ class _MyAppState extends State < MyApp > {
                     ),
                     HasilAkhir(hasilPerhitungan: hasilPerhitungan),
                     const SizedBox(height: 10),
-                      KonversiSuhu(
-                        onPressed: konversiSuhu,
-                      ),
-                      const SizedBox(height: 10),
-                        const Text(
-                            "Riwayat Konversi",
-                            style: TextStyle(fontSize: 18),
-                          ),
-                          const SizedBox(height: 10),
-                            RiwayatPerhitungan(listHasil: listHasil),
+                      const Text(
+                          "Riwayat Konversi",
+                          style: TextStyle(fontSize: 18),
+                        ),
+                        const SizedBox(height: 10),
+                          RiwayatPerhitungan(listHasil: listHasil),
               ],
             ),
         ),
